@@ -1,0 +1,18 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore log files
+*.log
+
+# Ignore virtual environment
+venv/
+
+# Ignore large datasets (if not required for the container)
+data/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
