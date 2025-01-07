@@ -10,11 +10,13 @@
 - [API Usage](#api-usage)
 - [Results](#results)
 - [Dataset](#dataset)
+- [Docker Setup](#docker-setup)
 - [Testing the API](#testing-the-api)
 - [Future Enhancements](#future-enhancements)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
+
 
 ---
 
@@ -48,7 +50,8 @@ This project implements a **Sentiment Analysis System** to classify text reviews
 - **notebook/**: Jupyter Notebook for end-to-end workflow
   - `sentiment_analysis.ipynb`
 - `requirements.txt`: List of Python dependencies
-- `Dockerfile`: Docker configuration for deployment
+- `Dockerfile`: Docker configuration for containerization
+- `.dockerignore`: Files to exclude from Docker builds
 - `LICENSE`: License information
 - `README.md`: Documentation
 
@@ -131,6 +134,27 @@ Results
 
 Dataset
 The dataset used is the IMDB Movie Reviews Dataset. Download it and place the file (IMDB Dataset.csv) in the data/ folder.
+Steps to Download:
+
+	1. Visit the IMDB Dataset page.
+	2. Download the aclImdb_v1.tar.gz file.
+	3. Extract the contents and locate the IMDB Dataset.csv file.
+	4. Move the file to the data/ directory in this repository.
+	
+Docker Setup
+This project includes a Dockerfile for containerization. Follow these steps to build and run the Docker container:
+
+Build the Docker Image
+	docker build -t sentiment-analysis-system
+	
+Run the Docker Container
+	docker run -p 5000:5000 sentiment-analysis-system
+
+Access the API
+The Flask API will be accessible at:
+
+Home: http://127.0.0.1:5000/
+Prediction: http://127.0.0.1:5000/predict
 
 Testing the API
 Use the test_api.py script to send a POST request and validate the /predict endpoint:
