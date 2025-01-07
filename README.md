@@ -34,7 +34,23 @@ This project implements a **Sentiment Analysis System** to classify text reviews
 ---
 
 ## Project Structure
-Sentiment-Analysis-System/ ├── data/ # Dataset folder │ ├── IMDB Dataset.csv # Raw dataset │ ├── processed_data.csv # Preprocessed data ├── models/ # Saved models │ ├── logistic_regression_model.pkl │ ├── tfidf_vectorizer.pkl ├── src/ # Source code for API │ ├── app.py # Flask API │ ├── test_api.py # Script to test the API ├── notebook/ # Jupyter Notebook │ ├── sentiment_analysis.ipynb # End-to-end notebook ├── requirements.txt # Python dependencies ├── Dockerfile # Docker configuration └── README.md # Project documentation
+Sentiment-Analysis-System/
+├── data/                        # Dataset folder
+│   ├── IMDB Dataset.csv         # Raw dataset
+│   ├── processed_data.csv       # Preprocessed dataset
+├── models/                      # Folder for saved models
+│   ├── logistic_regression_model.pkl
+│   ├── tfidf_vectorizer.pkl
+├── src/                         # Source code for the Flask API
+│   ├── app.py                   # Flask API implementation
+│   ├── test_api.py              # Script to test the API
+├── notebook/                    # Jupyter Notebook for end-to-end workflow
+│   ├── sentiment_analysis.ipynb
+├── requirements.txt             # List of Python dependencies
+├── Dockerfile                   # Docker configuration for deployment
+├── LICENSE                      # License information
+└── README.md                    # Documentation
+
 
 
 
